@@ -1,1 +1,0 @@
-# fruitful_models
