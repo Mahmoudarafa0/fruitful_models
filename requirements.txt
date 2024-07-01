@@ -1,6 +1,6 @@
 gunicorn
 flask
-cv2
+opencv-python==4.5.5.62
 numpy
 ultralytics
 tensorflow
