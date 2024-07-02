@@ -9,6 +9,10 @@ from PIL import Image
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({'message': 'home page'})
+
 @app.route('/predict/<plant>', methods=['POST'])
 def predict(plant):
     model = YOLO(f'{plant}.pt')
