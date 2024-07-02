@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import cv2
 import numpy as np
 from ultralytics import YOLO
@@ -6,6 +7,7 @@ import tensorflow as tf
 from PIL import Image
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/predict/<plant>', methods=['POST'])
 def predict(plant):
